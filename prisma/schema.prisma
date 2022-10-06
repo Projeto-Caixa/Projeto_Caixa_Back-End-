@@ -31,6 +31,7 @@ model Products {
 }
 
 model Venda {
+  idVendedor String
   id   String   @id @default(uuid())
   list Json[]
   createdAt  DateTime @default(now()) @map("created_at")
