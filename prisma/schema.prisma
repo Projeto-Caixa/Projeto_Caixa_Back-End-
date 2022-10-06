@@ -32,10 +32,8 @@ model Products {
 
 model Venda {
   id   String   @id @default(uuid())
-  idVendedor String
-  idProduto  String
-  quantidade Int
-  preco      String
+  list Json[]
   createdAt  DateTime @default(now()) @map("created_at")
   updatedAt  DateTime @updatedAt @map("updated_at")
 }
+

@@ -12,7 +12,7 @@ export class VendaService {
   }
 
   create(createVendaDto: CreateVendaDto) {
-    const venda: Venda = { ...createVendaDto };
+    const venda: any = { ...createVendaDto };
     return this.prisma.venda
       .create({
         data: venda,
