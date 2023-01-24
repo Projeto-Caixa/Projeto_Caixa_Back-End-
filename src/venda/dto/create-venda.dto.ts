@@ -13,7 +13,7 @@ export class CreateVendaDto {
         name: 'fanta laranja',
         title: 'fanta',
         description: 'fanta uva lata 350ml',
-        price: '5',
+        price: 5,
         image:
           'https://github.com/images-organization/myimages/blob/main/images-all/imgs/fanta%20uva.png?raw=true',
         avaliable: true,
