@@ -21,20 +21,20 @@ model User {
 }
 
 model Products {
-  id          String @id @default(uuid())
+  id          String  @id @default(uuid())
   name        String
-  nameabv     String
-  image       String
+  title       String
   description String
-  price       String
+  price       Float
+  image       String
   quantity    Int
+  avaliable   Boolean
 }
 
 model Venda {
   idVendedor String
-  id   String   @id @default(uuid())
-  list Json[]
+  id         String   @id @default(uuid())
+  list       Json[]
   createdAt  DateTime @default(now()) @map("created_at")
   updatedAt  DateTime @updatedAt @map("updated_at")
 }
-

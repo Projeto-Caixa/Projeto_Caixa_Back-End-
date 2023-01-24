@@ -2,33 +2,38 @@ import { ApiProperty } from '@nestjs/swagger';
 export class CreateProductDto {
   @ApiProperty({
     description: 'Nome do produto',
-    example: 'fanta uva',
+    example: 'X-Santo-Antonio',
   })
   name: String;
   @ApiProperty({
-    description: ' abreviação do Nome do produto',
-    example: 'fanta',
+    description: 'Nome abreviado do produto',
+    example: 'X-Sto',
   })
-  nameabv: String;
+  title: String;
   @ApiProperty({
-    description: ' img do produto',
-    example:
-      'https://github.com/images-organization/myimages/blob/main/images-all/imgs/fanta%20uva.png?raw=true',
-  })
-  image: String;
-  @ApiProperty({
-    description: ' uma descrição do produto',
-    example: 'fanta uva lata 350ml',
+    description: 'Breve descrição do produto',
+    example: 'Pão com carnes no tacho',
   })
   description: String;
   @ApiProperty({
-    description: 'preço do produto',
-    example: '5',
+    description: 'Valor do produto',
+    example: 12,
   })
-  price: String;
+  price: Number;
+  @ApiProperty({
+    description: 'Imagem do produto',
+    example: 'https://levesabor.com.br/media/25/sanduiche-carne-de-panela.png',
+  })
+  image: String;
   @ApiProperty({
     description: 'quantidade ainda disponivel do produto',
-    example: '10',
+    example: 10,
   })
   quantity: Number;
+
+  @ApiProperty({
+    description: 'Se o produto esta em estoque',
+    example: true,
+  })
+  avaliable: String;
 }
