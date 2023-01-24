@@ -11,6 +11,7 @@ import { VendaService } from './venda.service';
 import { CreateVendaDto } from './dto/create-venda.dto';
 import { UpdateVendaDto } from './dto/update-venda.dto';
 import { ApiOperation, ApiTags } from '@nestjs/swagger';
+import path from 'path';
 
 @ApiTags('Venda')
 @Controller('venda')
@@ -25,7 +26,7 @@ export class VendaController {
     return this.vendaService.create(createVendaDto);
   }
 
-  @Get()
+  @Get('all')
   @ApiOperation({
     summary: 'Find all  sales',
   })
@@ -45,6 +46,11 @@ export class VendaController {
   // update(@Param('id') id: string, @Body() updateVendaDto: UpdateVendaDto) {
   //   return this.vendaService.update(id, updateVendaDto);
   // }
+
+  @Delete('all')
+  Deleteall() {
+    return this.vendaService.Deleteall();
+  }
 
   @Delete(':id')
   @ApiOperation({

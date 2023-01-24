@@ -41,4 +41,9 @@ export class VendaService {
     await this.prisma.venda.delete({ where: { id } });
     return 'deletado com sucesso';
   }
+
+  async Deleteall() {
+    await this.prisma.venda.deleteMany({});
+    return 'todas as vendas foram deletadas com sucesso';
+  }
 }
