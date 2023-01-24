@@ -10,7 +10,9 @@ import {
 import { VendaService } from './venda.service';
 import { CreateVendaDto } from './dto/create-venda.dto';
 import { UpdateVendaDto } from './dto/update-venda.dto';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Venda')
 @Controller('venda')
 export class VendaController {
   constructor(private readonly vendaService: VendaService) {}

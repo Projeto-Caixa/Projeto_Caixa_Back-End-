@@ -11,12 +11,13 @@ export class CreateVendaDto {
     example: [
       {
         name: 'fanta laranja',
+        title: 'fanta',
+        description: 'fanta uva lata 350ml',
+        price: '5',
         image:
           'https://github.com/images-organization/myimages/blob/main/images-all/imgs/fanta%20uva.png?raw=true',
-        price: '5',
-        nameabv: 'fanta',
+        avaliable: true,
         quantity: 2,
-        description: 'fanta uva lata 350ml',
       },
     ],
   })
