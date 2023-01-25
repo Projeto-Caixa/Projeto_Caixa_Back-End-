@@ -10,6 +10,13 @@ export class CreateProductDto {
     example: 'X-Sto',
   })
   title: String;
+
+  @ApiProperty({
+    description: 'icone preto e branco do produto para impresão',
+    example: 'https://google.com/google.jpg',
+  })
+  icon: String;
+
   @ApiProperty({
     description: 'Breve descrição do produto',
     example: 'Pão com carnes no tacho',
