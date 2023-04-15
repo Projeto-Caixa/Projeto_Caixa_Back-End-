@@ -12,6 +12,12 @@ export class CreateProductDto {
   title: String;
 
   @ApiProperty({
+    description: 'Abreviação para o relatório',
+    example: 'X-Sto',
+  })
+  abv: String;
+
+  @ApiProperty({
     description: 'icone preto e branco do produto para impresão',
     example: 'https://google.com/google.jpg',
   })
