@@ -30,12 +30,10 @@ export class UserController {
   }
 
   @Get('')
-  @UseGuards(AuthGuard())
-  @ApiBearerAuth()
   @ApiOperation({
     summary: 'Only Admin - List all users.',
   })
-  findAll(@LoggedUser() user: User) {
+  findAll(user: User) {
     return this.userService.findAll(user);
   }
 
