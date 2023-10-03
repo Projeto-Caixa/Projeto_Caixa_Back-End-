@@ -17,15 +17,6 @@ import path from 'path';
 @Controller('venda')
 export class VendaController {
   constructor(private readonly vendaService: VendaService) {}
-
-  @Post()
-  @ApiOperation({
-    summary: 'Create a new sale',
-  })
-  create(@Body() createVendaDto: CreateVendaDto) {
-    return this.vendaService.create(createVendaDto);
-  }
-
   @Get('all')
   @ApiOperation({
     summary: 'Find all  sales',
@@ -36,10 +27,17 @@ export class VendaController {
 
   @Get(':id')
   @ApiOperation({
-    summary: 'Find sale by id',
+    summary: 'Find venda do cara',
   })
-  findOne(@Param('id') id: string) {
-    return this.vendaService.findOne(id);
+  personalLog(@Param('id') id: string) {
+    return this.vendaService.personalLog(id);
+  }
+  @Post()
+  @ApiOperation({
+    summary: 'Create a new sale',
+  })
+  create(@Body() createVendaDto: CreateVendaDto) {
+    return this.vendaService.create(createVendaDto);
   }
 
   // @Patch(':id')
@@ -47,16 +45,23 @@ export class VendaController {
   //   return this.vendaService.update(id, updateVendaDto);
   // }
 
-  @Delete('all')
-  Deleteall() {
-    return this.vendaService.Deleteall();
-  }
+  // @Delete('all')
+  // Deleteall() {
+  //   return this.vendaService.Deleteall();
+  // }
+  // @Get(':id')
+  // @ApiOperation({
+  //   summary: 'Find sale by id',
+  // })
+  // findOne(@Param('id') id: string) {
+  //   return this.vendaService.findOne(id);
+  // }
 
-  @Delete(':id')
-  @ApiOperation({
-    summary: 'Delete a sale',
-  })
-  remove(@Param('id') id: string) {
-    return this.vendaService.remove(id);
-  }
+  // @Delete(':id')
+  // @ApiOperation({
+  //   summary: 'Delete a sale',
+  // })
+  // remove(@Param('id') id: string) {
+  //   return this.vendaService.remove(id);
+  // }
 }

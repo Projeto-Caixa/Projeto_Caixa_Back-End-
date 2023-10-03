@@ -30,9 +30,9 @@ export class UserController {
   }
 
   @Get('')
-  @ApiOperation({
-    summary: 'Only Admin - List all users.',
-  })
+  // @ApiOperation({
+  //   summary: 'Only Admin - List all users.',
+  // })
   findAll(user: User) {
     return this.userService.findAll(user);
   }
