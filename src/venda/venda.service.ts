@@ -46,7 +46,7 @@ export class VendaService {
       }
     });
 
-    const products: any = [];
+    const products: any = {};
 
     const productsComplete = await this.ProductsService.findAll();
 
@@ -55,11 +55,11 @@ export class VendaService {
     });
 
     // console.log(products);
-    products.forEach((element) => {
-      if (element.name == 'Pastel') {
-        element.quantity = element.quantity + 10;
-      }
-    });
+    // products.forEach((element) => {
+    //   if (element.name == 'Pastel') {
+    //     element.quantity = element.quantity + 10;
+    //   }
+    // });
 
     console.log(products);
 
