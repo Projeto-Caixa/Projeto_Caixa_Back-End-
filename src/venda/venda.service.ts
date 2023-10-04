@@ -51,7 +51,7 @@ export class VendaService {
     const productsComplete = await this.ProductsService.findAll();
 
     productsComplete.forEach((element) => {
-      products.push({ name: element.name, quantity: 0 });
+      products = products, ({ name: element.name, quantity: 0 });
     });
 
     // console.log(products);
