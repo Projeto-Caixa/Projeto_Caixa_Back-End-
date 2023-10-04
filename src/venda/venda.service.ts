@@ -50,10 +50,6 @@ export class VendaService {
 
     const productsComplete = await this.ProductsService.findAll();
 
-    productsComplete.forEach((element) => {
-      products = products, ({ name: element.name, quantity: 0 });
-    });
-
     // console.log(products);
     // products.forEach((element) => {
     //   if (element.name == 'Pastel') {
