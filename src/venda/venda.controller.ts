@@ -45,10 +45,10 @@ export class VendaController {
   //   return this.vendaService.update(id, updateVendaDto);
   // }
 
-  // @Delete('all')
-  // Deleteall() {
-  //   return this.vendaService.Deleteall();
-  // }
+  @Delete('all')
+  Deleteall() {
+    return this.vendaService.Deleteall();
+  }
   // @Get(':id')
   // @ApiOperation({
   //   summary: 'Find sale by id',
